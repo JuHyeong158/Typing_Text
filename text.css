@@ -1,0 +1,52 @@
+/* 우선 마진,패딩값을 0으로 설정함 */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #168B9B;
+}
+
+
+.wrap{
+    color:#f0ffff;
+    /* 글자를 화면 가운데로 옮기기 */
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    /* 가운데 정렬 */
+    text-align: center;
+}
+
+.material-icons{
+    font-size: 8rem;
+}
+
+.a-text,
+.b-text{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#dynamic{
+    position: relative;
+    display: inline-block;
+}
+
+#dynamic::after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    right:-20px;
+    width:4px;
+    height:100%;
+    background-color:#f0ffff;
+}
+#dynamic.active::after{
+    display:none;
+}
